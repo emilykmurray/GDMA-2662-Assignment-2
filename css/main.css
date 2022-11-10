@@ -1,0 +1,463 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+    TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+        - Universal
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+        - Navigation
+        - Lists
+        - Anchors
+        - Footer
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - Hero
+        - Axis
+        - Container
+        - Flexbox
+        - Items
+        - Icons
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class   
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    2.0 - TOOLS
+-------------------------------------------------------------- */
+
+
+/*--------------------------------------------------------------
+    3.0 - GENERIC
+-------------------------------------------------------------- */
+
+/* ----------- UNIVERSAL ------------- */
+
+* {
+        font-family: 'Roboto Slab', 'Georgia', serif;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+    4.0 - ELEMENTS
+-------------------------------------------------------------- */
+
+.col-center {
+        justify-content: center;
+}
+
+/* ----- TYPOGRAPHY ----- */
+
+
+h1,
+h2 {
+        font-family: 'Pacifico', 'Arial', sans-serif;    
+}
+
+h1,
+h2,
+h3 {
+        text-transform: lowercase;
+}
+
+h1,
+h2,
+h3,
+a {
+        color: #00B0A3;
+}
+
+h1 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        text-align: center;
+}
+
+h2 {
+        font-size: 42px;
+        font-weight: 400;
+        /* margin: 0 0 15px 0; */
+}
+
+h3 {
+        margin: 0;
+        font-weight: 700;
+}
+
+p {
+        line-height: 28px;
+        color:#00515D;
+        margin-bottom: 25px;
+}
+
+/* ----- ANCHORS ----- */
+
+a {
+        text-decoration: none;
+        font: 16px 'Open Sans', sans-serif, 'Arial', sans-serif;
+        border-radius: 16px;
+        padding: 3px 12px 3px 12px;
+        background-color: #ffff;
+}
+
+a:hover {
+        border-radius: 16px;
+        color: #003833;
+}
+
+/* ----- LISTS ----- */
+
+li,
+[class^="fa"] {
+        color: #00515D;
+}
+
+ul {
+        padding-left: 20px;
+        line-height: 28px;
+        margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+    5.0 - OBJECTS
+-------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+        h1 {
+                font-size:2rem;
+        }
+}
+
+/* ----- FRAMEWORK ----- */
+
+.wrapper {
+        width: 90%;
+}
+
+.row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+}
+
+[class*='col-'] {
+        padding: 5px;
+}
+
+
+.col-sm-1 {
+    width: calc(100% * 1 / 12);
+}
+.col-sm-2 {
+    width: calc(100% * 2 / 12);
+}
+.col-sm-3 {
+    width: calc(100% * 3 / 12);
+}
+.col-sm-4 {
+    width: calc(100% * 4 / 12);
+}
+.col-sm-5 {
+    width: calc(100% * 5 / 12);
+}
+.col-sm-6 {
+    width: calc(100% * 6 / 12);
+}
+.col-sm-7 {
+    width: calc(100% * 7 / 12);
+}
+.col-sm-8 {
+    width: calc(100% * 8 / 12);
+}
+.col-sm-9 {
+    width: calc(100% * 9 / 12);
+}
+.col-sm-10 {
+    width: calc(100% * 10 / 12);
+}
+.col-sm-11 {
+    width: calc(100% * 11 / 12);
+}
+.col-sm-12 {
+    width: calc(100% * 12 / 12);
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .wrapper {
+        width: 85%;
+    }
+
+    [class*='col-'] {
+        padding: 8px;
+    }
+
+    .col-md-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-md-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-md-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-md-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-md-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-md-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-md-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-md-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-md-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-md-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-md-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-md-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .wrapper {
+        width: 80%;
+    }
+
+    [class*='col-'] {
+        padding: 10px 20px;
+    }
+
+    .col-lg-1 {
+        width: calc(100% * 1 / 12);
+    }
+    .col-lg-2 {
+        width: calc(100% * 2 / 12);
+    }
+    .col-lg-3 {
+        width: calc(100% * 3 / 12);
+    }
+    .col-lg-4 {
+        width: calc(100% * 4 / 12);
+    }
+    .col-lg-5 {
+        width: calc(100% * 5 / 12);
+    }
+    .col-lg-6 {
+        width: calc(100% * 6 / 12);
+    }
+    .col-lg-7 {
+        width: calc(100% * 7 / 12);
+    }
+    .col-lg-8 {
+        width: calc(100% * 8 / 12);
+    }
+    .col-lg-9 {
+        width: calc(100% * 9 / 12);
+    }
+    .col-lg-10 {
+        width: calc(100% * 10 / 12);
+    }
+    .col-lg-11 {
+        width: calc(100% * 11 / 12);
+    }
+    .col-lg-12 {
+        width: calc(100% * 12 / 12);
+    }
+}
+
+/*--------------------------------------------------------------
+    6.0 - COMPONENTS
+-------------------------------------------------------------- */
+
+
+body > header > div,
+header .wrapper div:last-child,
+.wrapper,
+#items > header,
+#items > header + p  {
+        margin: 0 auto;
+}
+
+
+
+header .wrapper div:last-child p,
+#axis > section:last-child {
+        text-align: center;
+}
+
+#flexbox,
+#axis,
+#container,
+#items {
+        padding: 55px 0;
+}
+
+#axis > section:last-child,
+header > div:last-child,
+a:hover {
+        background-color:  #FFD8DB;
+}
+
+/* ----- HERO ----- */
+
+header div .wrapper {
+        background: url("../img/bg-balloons.jpg") no-repeat;
+        -moz-background-size: contain;
+        -webkit-background-size: contain;
+        -o-background-size: contain;
+        -ms-background-size: contain;
+        background-size: contain;
+}
+
+/* header > div > div {
+        margin: 0 auto;
+} */
+
+header .wrapper div:last-child {
+        padding: 100px 0 40px;
+}
+
+header .wrapper div:last-child p {
+        margin-top: 5px;
+        font-size: 20px;
+        line-height: 35px;
+}
+
+/* ----- NAVIGATION ----- */
+
+/* nav {
+        margin: 30px 0 15px 0;  
+} */
+
+header li {
+        display: inline-block;
+}
+
+footer li {
+        /* margin: 10px 0 15px; */
+        list-style: none;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+        margin-top: 25px;
+        border-top: 10px solid #FFD8DB;
+}
+
+footer .row {
+        justify-content: left;
+}
+
+footer nav {
+        /* margin: 30px 0 30px 100px; */
+}
+
+footer p {
+        font-size: 18px;
+        margin: 0;
+        color:#00515D;
+        font-weight: 700;
+}
+
+footer p:last-child {
+        font-size: 14px;
+        font-weight: 400;
+}
+
+footer img {
+        margin-top: 40px;
+}
+
+/* ----- AXIS ----- */
+
+
+#axis > section:last-child {
+        padding: 2em;
+}
+
+#axis section:last-child h2 {
+        margin-bottom: 30px;
+}
+
+/* ----- CONTAINER ----- */
+
+#container {
+        padding-bottom: 30px;
+}
+
+#container p {
+        margin-bottom: 0;
+}
+
+
+/* ----- FLEXBOX ----- */
+
+
+#flexbox .row {
+        margin-top: 75px;
+}
+
+
+#flexbox > div {
+        margin: 0 auto;
+}
+
+
+/* ----- ITEMS ----- */
+
+#items > div{
+        padding-bottom: 0;
+}
+
+#items > header {
+        margin-bottom: 30px;
+}
+
+#items {
+        text-align: center;
+}
+
+
+/* ----- ICONS ----- */
+
+[class^="fa"] {
+        font-size: 42px;
+        font-weight: 900;
+}
+
+/* .fa-arrows-left-right,
+.fa-arrows-up-down-left-right {
+        margin: 25px 30px 0 0;
+} */
+
+/*--------------------------------------------------------------
+    7.0 - UTILITIES
+-------------------------------------------------------------- */
+
