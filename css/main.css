@@ -81,29 +81,32 @@ h1 {
 }
 
 h2 {
-        font-size: 42px;
+        font-size: 2.5rem;
         font-weight: 400;
-        /* margin: 0 0 15px 0; */
+        margin: 1.8em 0 0em 0;
 }
 
 h3 {
         margin: 0;
-        font-weight: 700;
+        font-weight: 500;
+        font-size: 1.4rem;
 }
 
 p {
-        line-height: 28px;
+        line-height: 1.9rem;
         color:#00515D;
-        margin-bottom: 25px;
+        margin: .6em 0 2em 0;
+        font-size: 1.1rem;
 }
 
 /* ----- ANCHORS ----- */
 
 a {
         text-decoration: none;
-        font: 16px 'Open Sans', sans-serif, 'Arial', sans-serif;
+        font: 1.2rem 'Open Sans', sans-serif, 'Arial', sans-serif;
+        font-weight: 400;
         border-radius: 16px;
-        padding: 3px 12px 3px 12px;
+        padding: 0 .6em;
         background-color: #ffff;
 }
 
@@ -120,8 +123,8 @@ li,
 }
 
 ul {
-        padding-left: 20px;
-        line-height: 28px;
+        padding-left: 0;
+        line-height: 2rem;
         margin-top: 0;
 }
 
@@ -134,15 +137,98 @@ ul {
 }
 
 @media screen and (min-width: 1024px) {
+
         h1 {
-                font-size:2rem;
+                font-size: 6rem;
+                line-height: .5em;
         }
-}
+
+        nav {
+                margin-top: 1.6em;
+                align-content: right;
+        }
+
+        nav ul {
+                text-align: right;
+        }
+
+        header a {
+                font-size: 1.1rem;
+                padding-right: 0;
+                padding-left: 1.9em;
+        }
+        #systems {
+                text-align: center;
+        }
+
+        #systems > .row section {
+                align-content: flex-start;
+        }
+
+        #layout {
+                display: flex;
+                flex-wrap: wrap;
+        }
+
+        #benefits > div {
+                margin: 0 auto;
+        }
+
+        #benefits section {
+                text-align: left;
+        }
+
+        footer div {
+                text-align: left;
+        }
+
+        footer ul {
+                text-align: left;
+        }
+
+        footer a {
+                padding-left: 0;
+        }
+
+        #testing {
+                padding: 0;
+                margin: 0;
+        }
+
+        #testing h2 {
+                padding: 0;
+                margin: 0;
+        }
+
+        #testing p:last-child {
+                margin-bottom: 0;
+        }
+
+        #testing > div:first-child {
+                background: url("../img/rainbow.jpg") no-repeat -25px;
+                  background-size: auto;
+                -moz-background-size: contain;
+                -webkit-background-size: contain;
+                -o-background-size: contain;
+                -ms-background-size: contain;
+                background-size: cover;
+        }
+
+        header div div {
+                padding: 5em;
+        }
+
+        img {
+                width: 6em;
+                padding-top: 1em;
+                padding-bottom: .5em;
+              }
+        }
 
 /* ----- FRAMEWORK ----- */
 
 .wrapper {
-        width: 90%;
+        width: 97%;
 }
 
 .row {
@@ -152,7 +238,7 @@ ul {
 }
 
 [class*='col-'] {
-        padding: 5px;
+        padding: 8px;
 }
 
 
@@ -250,7 +336,7 @@ ul {
     }
 
     [class*='col-'] {
-        padding: 10px 20px;
+        padding: 8px;
     }
 
     .col-lg-1 {
@@ -299,26 +385,19 @@ ul {
 body > header > div,
 header .wrapper div:last-child,
 .wrapper,
-#items > header,
-#items > header + p  {
+#benefits > header,
+#benefits > header + p  {
         margin: 0 auto;
 }
 
 
 
 header .wrapper div:last-child p,
-#axis > section:last-child {
+#layout > section:last-child {
         text-align: center;
 }
 
-#flexbox,
-#axis,
-#container,
-#items {
-        padding: 55px 0;
-}
-
-#axis > section:last-child,
+#layout > section:last-child,
 header > div:last-child,
 a:hover {
         background-color:  #FFD8DB;
@@ -335,112 +414,102 @@ header div .wrapper {
         background-size: contain;
 }
 
-/* header > div > div {
-        margin: 0 auto;
-} */
-
-header .wrapper div:last-child {
-        padding: 100px 0 40px;
+header .wrapper div:last-child p {
+        font-size: 1.2rem;
+        line-height: 2em;
+        margin: 0 2rrem;
 }
 
-header .wrapper div:last-child p {
-        margin-top: 5px;
-        font-size: 20px;
-        line-height: 35px;
+header div div {
+        text-align: center;
 }
 
 /* ----- NAVIGATION ----- */
 
-/* nav {
-        margin: 30px 0 15px 0;  
-} */
+nav {
+        text-align: center;
+}
 
 header li {
         display: inline-block;
 }
 
 footer li {
-        /* margin: 10px 0 15px; */
         list-style: none;
 }
 
 /* ----- FOOTER ----- */
 
 footer {
-        margin-top: 25px;
         border-top: 10px solid #FFD8DB;
+        text-align: center;
 }
 
 footer .row {
         justify-content: left;
 }
 
-footer nav {
-        /* margin: 30px 0 30px 100px; */
+footer li {
+        margin: .8em 0;
 }
 
 footer p {
-        font-size: 18px;
+        font-size: 1.4rem;
         margin: 0;
         color:#00515D;
         font-weight: 700;
 }
 
 footer p:last-child {
-        font-size: 14px;
+        font-size: 1rem;
         font-weight: 400;
 }
 
-footer img {
-        margin-top: 40px;
-}
-
-/* ----- AXIS ----- */
+/* ----- LAYOUT ----- */
 
 
-#axis > section:last-child {
+#layout > section:last-child {
         padding: 2em;
 }
 
-#axis section:last-child h2 {
-        margin-bottom: 30px;
+#layout h2:last-child {
+        margin: .5em 0 .7em;
+        font-size: 2.4rem;
 }
 
-/* ----- CONTAINER ----- */
+/* ----- TESTING ----- */
 
-#container {
-        padding-bottom: 30px;
+#testing {
+        padding-bottom: 2em;
 }
 
-#container p {
-        margin-bottom: 0;
+#testing > div:first-child{
+        background: url("../img/rainbow.jpg") no-repeat -20px;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;
 }
 
-
-/* ----- FLEXBOX ----- */
-
-
-#flexbox .row {
-        margin-top: 75px;
-}
+/* ----- SYSTEMS ----- */
 
 
-#flexbox > div {
+#systems > div {
         margin: 0 auto;
 }
 
+/* ----- BENEFITS ----- */
 
-/* ----- ITEMS ----- */
-
-#items > div{
+#benefits > div{
         padding-bottom: 0;
 }
 
-#items > header {
+#benefits > header {
         margin-bottom: 30px;
 }
 
-#items {
+#benefits {
         text-align: center;
 }
 
@@ -448,14 +517,17 @@ footer img {
 /* ----- ICONS ----- */
 
 [class^="fa"] {
-        font-size: 42px;
+        font-size: 3.3rem;
         font-weight: 900;
+        padding: .3em 0;
 }
 
-/* .fa-arrows-left-right,
-.fa-arrows-up-down-left-right {
-        margin: 25px 30px 0 0;
-} */
+.fa-bacteria,
+.fa-atom,
+.fa-dna {
+        font-size: 1.9rem;
+        padding: 0;
+}
 
 /*--------------------------------------------------------------
     7.0 - UTILITIES

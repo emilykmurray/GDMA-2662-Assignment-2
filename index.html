@@ -13,22 +13,22 @@
 
 <body>
     <header>
-        <div class="wrapper row col-sm-12">
-            <div class="col-sm-12 col-md-3 col-center">
+        <div class="wrapper row">
+            <div class="col-sm-12 col-md-3 col-lg-2">
                 <img src="img/logo-ding.jpg" alt="ding" width="140">
             </div>
-            <nav class="col-sm-12 col-md-7">
+            <nav class="col-sm-12 col-md-9 col-lg-10">
                 <ul>
-                    <li><a href="#flexbox">Flexbox</a></li>
-                    <li><a href="#axis">Axis</a></li>
-                    <li><a href="#container">Container</a></li>
-                    <li><a href="#items">Items</a></li>
+                    <li><a href="#systems">Systems</a></li>
+                    <li><a href="#layout">Layout</a></li>
+                    <li><a href="#testing">Testing</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
                 </ul>
             </nav>
         </div>
 
         <div>
-            <div class="wrapper col-sm-12">
+            <div class="wrapper col-sm-12 col-lg-6">
                 <div>
                     <h1>Atomic Design</h1>
                     <p>We're not designing pages, we're designing systems of components.</p>
@@ -38,16 +38,16 @@
     </header>
 
     <main class="wrapper">
-        <section id="flexbox">
-            <div class="col-sm-12">
+        <section id="systems">
+            <div class="col-sm-12 col-lg-8">
                 <header>
                     <h2>design systems</h2>
                 </header>
                 <p>A lot has been said about creating design systems, and much of it focuses on establishing foundations for color, typography, grids, texture and the like. This type of thinking is certainly important, but I'm slightly less interested in these aspects of design because ultimately they are and will always be subjective. Atomic design is methodology for creating design systems. There are five distinct levels in atomic design: Atoms, Molecules, Organisms, Templates, Pages.</p>
             </div>
 
-            <div>
-                <section class="row col-sm-12">
+            <div class="row">
+                <section class="row col-sm-12 col-lg-4">
                     <div class="col-sm-2 col-lg-12">
                         <i class="fa-solid fa-atom"></i>
                     </div>
@@ -59,11 +59,11 @@
                     </div>
                 </section>
 
-                <section class="row col-sm-12">
-                    <div class="col-sm-2">
+                <section class="row col-sm-12 col-lg-4">
+                    <div class="col-sm-2 col-lg-12">
                         <i class="fa-solid fa-dna"></i>
                     </div>
-                    <div class="col-sm-10">
+                    <div class="col-sm-10 col-lg-12">
                         <header>
                             <h3>molecules</h3>
                         </header>
@@ -71,23 +71,23 @@
                     </div>
                 </section>
 
-                <section class="row col-sm-12">
-                    <div class="col-sm-2">
+                <section class="row col-sm-12 col-lg-4">
+                    <div class="col-sm-2 col-lg-12">
                         <i class="fa-solid fa-bacteria"></i>
                     </div>
-                    <div class="col-sm-10">
+                    <div class="col-sm-10 col-lg-12">
                         <header>
                             <h3>organisms</h3>
                         </header>
-                        <p>Molecules give us some building blocks to work with, and we can now combine them together to form organisms. <b>Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound.</b>. Organisms can consist of similar and/or different molecule types. Building up from molecules to organisms encourages creating standalone, portable, reusable components.</p>
+                        <p>Molecules give us some building blocks to work with, and we can now combine them together to form organisms. <b>Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound</b>. Organisms can consist of similar and/or different molecule types. Building up from molecules to organisms encourages creating standalone, portable, reusable components.</p>
                     </div>
                 </section>
             </div>
         </section>
 
-        <div id="axis">
-            <section>
-                <div>
+        <div id="layout">
+            <section class="col-lg-8">
+                <div class="col-lg-12">
                     <header>
                         <h2>layout</h2>
                     </header>
@@ -111,7 +111,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="col-lg-4">
                 <header>
                     <h2>why atomic design</h2>
                 </header>
@@ -119,12 +119,11 @@
             </section>
         </div>
 
-        <section id="container" class="row">
-            <div>
-               <!--<img src="img/rainbow.jpg" alt="" width="375">--> 
+        <section id="testing" class="row">
+            <div class="col-lg-5">
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-lg-7">
                 <header>
                     <h2>testing the systems</h2>
                 </header>
@@ -134,8 +133,8 @@
             </div>
         </section>
 
-        <section id="items">
-            <div class="">
+        <section id="benefits">
+            <div class="col-lg-8">
                 <header>
                     <h2>benefits</h2>
                     <p>Atomic design can require considerably more thought and planning, but it's often worth the extra effort. So what are the main benefits of it?
@@ -144,11 +143,11 @@
             </div>
 
             <div class="row">
-                <section class="row col-sm-12">
-                    <div class="col-sm-12">
+                <section class="row col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-1">
                         <i class="fa-solid fa-pen-ruler"></i>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-lg-11">
                         <header>
                             <h3>design</h3>
                         </header>
@@ -157,11 +156,11 @@
                     </div>
                 </section>
 
-                <section class="row col-sm-12">
-                    <div class="col-sm-12">
+                <section class="row col-sm-12 col-lg-6">
+                    <div class="col-sm-12 col-lg-1">
                         <i class="fa-solid fa-code"></i>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-lg-11">
                         <header>
                             <h3>code</h3>
                         </header>
@@ -177,16 +176,16 @@
         <div class="wrapper row col-sm-12">
             <div class="col-sm-12">
                 <img src="img/logo-ding.jpg" alt="ding" width="106">
-                <p>MDN</p>
-                <p>Basic concepts of flexbox</p>
+                <p>Atomic Design</p>
+                <p>By Brad Frost</p>
             </div>
 
-            <nav class="col-sm-12">
+            <nav class="col-sm-12 col-lg-1">
                 <ul>
-                    <li><a href="#flexbox">Flexbox</a></li>
-                    <li><a href="#axis">Axis</a></li>
-                    <li><a href="#container">Container</a></li>
-                    <li><a href="#items">Items</a></li>
+                    <li><a href="#systems">Systems</a></li>
+                    <li><a href="#layout">Layout</a></li>
+                    <li><a href="#testing">Testing</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
                 </ul>
             </nav>
         </div>
