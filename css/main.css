@@ -44,36 +44,33 @@
         box-sizing: border-box;
 }
 
+html {
+        scroll-behavior: smooth;
+      }
+
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+img {
+        width: 150px;
+        padding: 1em 0 .5em;
+}
+
+footer img {
+        width: 100px;
+        padding: 1em 0 .5em;
+}
+
 @media screen and (min-width: 768px) {
 
-        img {
-                padding-top: 1em;
-                padding-bottom: .5em;
-              }
 }
 
 @media screen and (min-width: 1024px) {
 
-
-        img {
-                padding-top: 1em;
-                padding-bottom: .5em;
-              }
 }
 
 /* ----- TYPOGRAPHY ----- */
-
-@media screen and (min-width: 1024px) {
-
-        h1 {
-                font-size: 6rem;
-                line-height: .5em;
-        }
-}
 
 h1,
 h2 {
@@ -93,19 +90,31 @@ a {
         color: #00B0A3;
 }
 
-h1 {
-        font-size: 4.5rem;
-        font-weight: 400;
+nav,
+header div div,
+footer,
+#systems > div,
+#layout > section:last-child,
+#benefits {
         text-align: center;
 }
 
-h2 {
-        font-size: 2.5rem;
+h1 {
+        font-size: 4.5rem;
         font-weight: 400;
+        margin: 0;
+        padding-top: 4em;
+}
+
+h2 {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-bottom: .3em;
+
 }
 
 h3 {
-        margin: 0;
+        margin: 0 0 .3em;
         font-weight: 500;
         font-size: 1.4rem;
 }
@@ -113,8 +122,15 @@ h3 {
 p {
         line-height: 1.9rem;
         color:#00515D;
-        /* margin: .6em 0 2em 0; */
         font-size: 1.1rem;
+        margin: 0 0 1em;
+}
+
+@media screen and (min-width: 1024px) {
+
+        h1 {
+                font-size: 6rem;
+        }
 }
 
 /* ----- LISTS ----- */
@@ -136,7 +152,17 @@ ul {
 /* ----- FRAMEWORK ----- */
 
 .wrapper {
-        width: 97%;
+        width: 93%;
+}
+
+.row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+}
+
+[class*='col-'] {
+        padding: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -152,17 +178,6 @@ ul {
             width: 80%;
         }
 }
-
-.row {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-}
-
-[class*='col-'] {
-        padding: 8px;
-}
-
 
 .col-sm-1 {
     width: calc(100% * 1 / 12);
@@ -291,22 +306,35 @@ ul {
     }
 }
 
+
+/* ----- ANCHORS ----- */
+
+
+a {
+        text-decoration: none;
+        font: 1.2rem 'Open Sans', sans-serif, 'Arial', sans-serif;
+        font-weight: 400;
+        padding: 0 .6em;
+        background-color: #ffff;
+}
+
+a:hover {
+        border-radius: 16px;
+        color: #003833;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+}
+
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-
-body > header > div,
 header .wrapper div:last-child,
-.wrapper,
-#benefits > header,
-#benefits > header + p  {
+.wrapper {
         margin: 0 auto;
-}
-
-header .wrapper div:last-child p,
-#layout > section:last-child {
-        text-align: center;
 }
 
 #layout > section:last-child,
@@ -316,41 +344,6 @@ a:hover {
 }
 
 /* ----- HERO ----- */
-
-@media screen and (min-width: 768px) {
-
-        header a {
-                font-size: 1rem;
-                padding-right: 0;
-                padding-left: 1.9em;
-        }
-
-        h1 + p {
-                font-size: 40px;
-        }
-}
-
-
-@media screen and (min-width: 1024px) {
-
-
-        header a {
-                font-size: 1.1rem;
-                padding-right: 0;
-                padding-left: 1.9em;
-        }
-
-
-        header div div {
-                padding: 5em;
-        }
-
-        img {
-                width: 6em;
-                padding-top: 1em;
-                padding-bottom: .5em;
-              }
-}
 
 header div .wrapper {
         background: url("../img/bg-balloons.jpg") no-repeat;
@@ -362,12 +355,41 @@ header div .wrapper {
 }
 
 header .wrapper div:last-child p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 2em;
+        padding-bottom: 3em;
 }
 
-header div div {
-        text-align: center;
+header li {
+        display: inline-block;
+}
+
+#hero > div:first-child {
+        background-color: #fff;
+        border-bottom: 5px solid #FFD8DB;
+}
+
+@media screen and (min-width: 768px) {
+
+        header a {
+                font-size: 1rem;
+                padding-right: 0;
+                margin-left: 1.9em;
+        }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+        header a {
+                font-size: 1.1rem;
+                padding: 0 0 0 1.9em;
+        }
+
+        header .wrapper div:last-child p {
+                padding-bottom: 2em;
+        }
 }
 
 /* ----- NAVIGATION ----- */
@@ -380,55 +402,33 @@ header div div {
         }
 
         nav ul {
-                text-align: center;
+                text-align: right;
         }
 }
 
 @media screen and (min-width: 1024px) {
 
-        nav {
-                margin-top: 1.6em;
-        }
 
         nav ul {
                 text-align: right;
         }
 }
 
-nav {
-        text-align: center;
-}
-
-header li {
-        display: inline-block;
-}
-
-
 /* ----- FOOTER ----- */
 
-
-@media screen and (min-width: 1024px) {
-        footer {
-                text-align: left;
-        }
-        
-        footer ul {
-                text-align: left;
-        }
-        
-        footer a {
-                padding-left: 0;
-        }
-}
-
 footer {
-        border-top: 10px solid #FFD8DB;
-        text-align: center;
+        border-top: 12px solid #FFD8DB;
+        margin-bottom: 4em;
 }
 
 footer .row {
         justify-content: left;
 }
+
+footer ul {
+        margin-top: 4em;
+}
+
 
 footer li {
         margin: .8em 0;
@@ -448,37 +448,51 @@ footer p:last-child {
 }
 
 
-/* ----- ANCHORS ----- */
+
+@media screen and (min-width: 768px) {
+
+        footer ul {
+                text-align: left;
+        }
+}
 
 @media screen and (min-width: 1024px) {
-
-}
-
-a {
-        text-decoration: none;
-        font: 1.2rem 'Open Sans', sans-serif, 'Arial', sans-serif;
-        font-weight: 400;
-        padding: 0 .6em;
-        background-color: #ffff;
-}
-
-a:hover {
-        border-radius: 16px;
-        color: #003833;
+        footer {
+                text-align: left;
+        }
+        
+        footer ul {
+                text-align: left;
+        }
+        
+        footer a {
+                padding-left: 0;
+        }
 }
 
 /* ----- SYSTEMS ----- */
 
+
+#systems {
+        margin: 2.7em 0;
+}
+
+#systems > div {
+        margin: 0 auto;
+        text-align: left;
+}
+
 @media screen and (min-width: 768px) {
 
-        #systems {
+        #systems > div {
                 text-align: center;
                 margin: 0 auto;
         }
 
-        #systems div div {
-                text-align: center;
+
+        #systems section {
                 margin: 0 auto;
+                text-align: center;
         }
 }
 
@@ -490,22 +504,47 @@ a:hover {
 
         #systems div div {
                 text-align: center;
-                margin: 0 auto;
         }
-}
 
+        #systems {
+                margin-bottom: 4em;
+        }
 
-#systems > div {
-        margin: 0 auto;
+        #systems > div:first-child {
+                margin-bottom: 3em;
+                margin-top: 3em;
+                text-align: center;
+        }
 }
 
 /* ----- TESTING ----- */
 
-@media screen and (min-width: 1024px) {
-        #testing {
-                padding: 0;
-                margin: 0;
+
+#testing {
+        margin: 3em 0 6em;
+}
+
+#testing > div:first-child{
+        background: url("../img/rainbow.jpg") no-repeat -3px 24px;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-clip: content-box;
+}
+
+
+@media screen and (min-width: 768px) {
+
+        #testing > div:last-child {
+                margin: 0 auto;
+                text-align: center;
         }
+}
+
+@media screen and (min-width: 1024px) {
 
         #testing h2 {
                 padding: 0;
@@ -514,6 +553,10 @@ a:hover {
 
         #testing p:last-child {
                 margin-bottom: 0;
+        }
+
+        #testing > div:last-child {
+                text-align: left;
         }
 
         #testing > div:first-child {
@@ -530,22 +573,26 @@ a:hover {
         }
 }
 
-#testing {
-        padding-bottom: 2em;
+/* ----- LAYOUT ----- */
+
+#layout section {
+        margin: .6em 0;
 }
 
-#testing > div:first-child{
-        background: url("../img/rainbow.jpg") no-repeat -3px 24px;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        background-size: cover;
-        background-position: center;
+
+#layout > section:last-child {
+        padding: 2em;
         background-clip: content-box;
 }
 
-/* ----- LAYOUT ----- */
+#layout section:last-child h2 {
+        margin: 1.5em 0 .7em;
+        font-size: 2.4rem;
+}
+
+#layout > section:last-child > p {
+        padding: 0 1.5em 1.5em;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -556,19 +603,28 @@ a:hover {
 }
 
 @media screen and (min-width: 1024px) {
-}
 
-#layout > section:last-child {
-        padding: 2em;
-}
-
-#layout section:last-child h2 {
-        margin: .5em 0 .7em;
-        font-size: 2.4rem;
+        #layout {
+                margin-bottom: 5em;
+        }
 }
 
 /* ----- BENEFITS ----- */
 
+
+#benefits {
+        margin-bottom: 5em;
+}
+
+
+
+@media screen and (min-width: 768px) {
+        #benefits header, 
+        #benefits section {
+                margin: 0 auto;
+        }
+
+}
 
 @media screen and (min-width: 1024px){
         #benefits > div {
@@ -578,18 +634,15 @@ a:hover {
         #benefits section {
                 text-align: left;
         }
-}
 
-#benefits > div{
-        padding-bottom: 0;
-}
+        #benefits > header {
+                margin: 0 auto;
+        }
 
-#benefits > header {
-        margin-bottom: 5em;
+        #benefits > div > section:first-child,
+        #benefits > div > section:last-child {
+        padding-top: 5em;
 }
-
-#benefits {
-        text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -604,21 +657,21 @@ a:hover {
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #fff;
+        width: 100%
 }
+
 /* ----- ICONS ----- */
 
 [class^="fa"] {
-        font-size: 3.3rem;
-        font-weight: 900;
-        padding: .3em 0;
+        font-size: 2.5rem;
         color: #00515D;
-}
+        font-weight: 900;
+} 
 
 .fa-bacteria,
 .fa-atom,
 .fa-dna {
         font-size: 1.9rem;
         padding: 0;
+        color: #00515D;
 }
-
