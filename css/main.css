@@ -51,7 +51,6 @@
 @media screen and (min-width: 768px) {
 
         img {
-                width: 6em;
                 padding-top: 1em;
                 padding-bottom: .5em;
               }
@@ -61,7 +60,6 @@
 
 
         img {
-                width: 6em;
                 padding-top: 1em;
                 padding-bottom: .5em;
               }
@@ -104,8 +102,6 @@ h1 {
 h2 {
         font-size: 2.5rem;
         font-weight: 400;
-        /* margin: 1.8em 0 0em 0; */
-        background-clip: content-box;
 }
 
 h3 {
@@ -123,8 +119,7 @@ p {
 
 /* ----- LISTS ----- */
 
-li,
-[class^="fa"] {
+li {
         color: #00515D;
 }
 
@@ -142,6 +137,20 @@ ul {
 
 .wrapper {
         width: 97%;
+}
+
+@media screen and (min-width: 768px) {
+
+        .wrapper {
+            width: 85%;
+        }
+}
+
+@media screen and (min-width: 1024px) {
+
+        .wrapper {
+            width: 80%;
+        }
 }
 
 .row {
@@ -195,10 +204,6 @@ ul {
 
 @media screen and (min-width: 768px) {
 
-    .wrapper {
-        width: 85%;
-    }
-
     [class*='col-'] {
         padding: 8px;
     }
@@ -243,10 +248,6 @@ ul {
 
 
 @media screen and (min-width: 1024px) {
-
-    .wrapper {
-        width: 80%;
-    }
 
     [class*='col-'] {
         padding: 8px;
@@ -363,7 +364,6 @@ header div .wrapper {
 header .wrapper div:last-child p {
         font-size: 1.2rem;
         line-height: 2em;
-        margin: 0 2rem;
 }
 
 header div div {
@@ -388,7 +388,6 @@ header div div {
 
         nav {
                 margin-top: 1.6em;
-                align-content: right;
         }
 
         nav ul {
@@ -409,7 +408,7 @@ header li {
 
 
 @media screen and (min-width: 1024px) {
-        footer div {
+        footer {
                 text-align: left;
         }
         
@@ -459,7 +458,6 @@ a {
         text-decoration: none;
         font: 1.2rem 'Open Sans', sans-serif, 'Arial', sans-serif;
         font-weight: 400;
-        border-radius: 16px;
         padding: 0 .6em;
         background-color: #ffff;
 }
@@ -485,9 +483,6 @@ a:hover {
 }
 
 @media screen and (min-width: 1024px) {
-        #systems {
-                text-align: center;
-        }
 
         #systems > .row section {
                 align-content: flex-start;
@@ -561,10 +556,6 @@ a:hover {
 }
 
 @media screen and (min-width: 1024px) {
-        #layout {
-                display: flex;
-                flex-wrap: wrap;
-        }
 }
 
 #layout > section:last-child {
@@ -594,7 +585,7 @@ a:hover {
 }
 
 #benefits > header {
-        margin-bottom: 30px;
+        margin-bottom: 5em;
 }
 
 #benefits {
@@ -609,12 +600,19 @@ a:hover {
         justify-content: center;
 }
 
+#pos-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+}
 /* ----- ICONS ----- */
 
 [class^="fa"] {
         font-size: 3.3rem;
         font-weight: 900;
         padding: .3em 0;
+        color: #00515D;
 }
 
 .fa-bacteria,

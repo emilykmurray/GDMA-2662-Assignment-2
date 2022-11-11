@@ -12,28 +12,28 @@
 </head>
 
 <body>
-    <header>
-        <div class="wrapper row">
-            <div class="col-sm-12 col-md-3 col-lg-2">
-                <img src="img/logo-ding.jpg" alt="ding" width="140">
+    <header id="hero">
+        <div id="pos-fixed">
+            <div class="wrapper row">
+                <div class="col-sm-12 col-md-3 col-lg-2">
+                    <img src="img/logo-ding.jpg" alt="ding" width="140">
+                </div>
+                <nav class="col-sm-12 col-md-9 col-lg-10">
+                    <ul>
+                        <li><a href="#systems">Systems</a></li>
+                        <li><a href="#layout">Layout</a></li>
+                        <li><a href="#testing">Testing</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="col-sm-12 col-md-9 col-lg-10">
-                <ul>
-                    <li><a href="#systems">Systems</a></li>
-                    <li><a href="#layout">Layout</a></li>
-                    <li><a href="#testing">Testing</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                </ul>
-            </nav>
         </div>
 
         <div>
-            <div class="wrapper col-sm-12 col-lg-6">
+            <div class="wrapper">
+                <h1>Atomic Design</h1>
                 <div>
-                    <h1>Atomic Design</h1>
-                    <div class="col-lg-6">
-                        <p>We're not designing pages, we're designing systems of components.</p>
-                    </div>
+                    <p>We're not designing pages, we're designing systems of components.</p>
                 </div>
             </div>
         </div>
@@ -87,14 +87,12 @@
             </div>
         </section>
 
-        <div id="layout">
+        <div id="layout" class="row">
             <section class="col-lg-8">
-                <div class="col-lg-12 col-md-12">
-                    <header>
-                        <h2>layout</h2>
-                    </header>
-                    <p>At the template stage, we break our chemistry analogy to get into language that makes more sense to our clients and our final output. Templates consist mostly of groups of organisms stitched together to form pages. It's here where we start to see the design coming together and start seeing things like layout in action.</p>
-                </div>
+                <header>
+                    <h2>layout</h2>
+                </header>
+                <p>At the template stage, we break our chemistry analogy to get into language that makes more sense to our clients and our final output. Templates consist mostly of groups of organisms stitched together to form pages. It's here where we start to see the design coming together and start seeing things like layout in action.</p>
         
                 <div class="row">
                     <section class="col-sm-12 col-md-6 col-lg-6">
@@ -136,13 +134,11 @@
         </section>
 
         <section id="benefits">
-            <div class="col-sm-12 col-md-10 col-lg-8">
-                <header>
-                    <h2>benefits</h2>
-                    <p>Atomic design can require considerably more thought and planning, but it's often worth the extra effort. So what are the main benefits of it?
-                    </p>
-                </header>
-            </div>
+            <header class="col-sm-12 col-md-10 col-lg-8">
+                <h2>benefits</h2>
+                <p>Atomic design can require considerably more thought and planning, but it's often worth the extra effort. So what are the main benefits of it?
+                </p>
+            </header>
 
             <div class="row">
                 <section class="row col-sm-12 col-lg-6">
@@ -175,13 +171,7 @@
     </main>
 
     <footer>
-        <div class="wrapper row col-sm-12">
-            <div class="col-sm-12">
-                <img src="img/logo-ding.jpg" alt="ding" width="106">
-                <p>Atomic Design</p>
-                <p>By Brad Frost</p>
-            </div>
-
+        <div class="wrapper row">
             <nav class="col-sm-12 col-lg-1">
                 <ul>
                     <li><a href="#systems">Systems</a></li>
@@ -190,6 +180,12 @@
                     <li><a href="#benefits">Benefits</a></li>
                 </ul>
             </nav>
+
+            <div class="col-sm-12">
+                <img src="img/logo-ding.jpg" alt="ding" width="106">
+                <p>Atomic Design</p>
+                <p>By Brad Frost</p>
+            </div>
         </div>
     </footer>
 </body>
