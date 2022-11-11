@@ -9,19 +9,18 @@
         - Universal
 4.0 - Elements: styling for bare/generic HTML elements 
         - Typography: Headings, Paragraphs, Blockquotes, Anchors
-        - Navigation
         - Lists
-        - Anchors
-        - Footer
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
         - Hero
-        - Axis
-        - Container
-        - Flexbox
-        - Items
-        - Icons
+        - Navigation
+        - Footer
+        - Anchors
+        - Systems
+        - Testing
+        - Layout
+        - Benefits
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class   
 --------------------------------------------------------------*/
 
@@ -49,12 +48,34 @@
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
-.col-center {
-        justify-content: center;
+@media screen and (min-width: 768px) {
+
+        img {
+                width: 6em;
+                padding-top: 1em;
+                padding-bottom: .5em;
+              }
+}
+
+@media screen and (min-width: 1024px) {
+
+
+        img {
+                width: 6em;
+                padding-top: 1em;
+                padding-bottom: .5em;
+              }
 }
 
 /* ----- TYPOGRAPHY ----- */
 
+@media screen and (min-width: 1024px) {
+
+        h1 {
+                font-size: 6rem;
+                line-height: .5em;
+        }
+}
 
 h1,
 h2 {
@@ -83,7 +104,8 @@ h1 {
 h2 {
         font-size: 2.5rem;
         font-weight: 400;
-        margin: 1.8em 0 0em 0;
+        /* margin: 1.8em 0 0em 0; */
+        background-clip: content-box;
 }
 
 h3 {
@@ -95,24 +117,8 @@ h3 {
 p {
         line-height: 1.9rem;
         color:#00515D;
-        margin: .6em 0 2em 0;
+        /* margin: .6em 0 2em 0; */
         font-size: 1.1rem;
-}
-
-/* ----- ANCHORS ----- */
-
-a {
-        text-decoration: none;
-        font: 1.2rem 'Open Sans', sans-serif, 'Arial', sans-serif;
-        font-weight: 400;
-        border-radius: 16px;
-        padding: 0 .6em;
-        background-color: #ffff;
-}
-
-a:hover {
-        border-radius: 16px;
-        color: #003833;
 }
 
 /* ----- LISTS ----- */
@@ -131,99 +137,6 @@ ul {
 /*--------------------------------------------------------------
     5.0 - OBJECTS
 -------------------------------------------------------------- */
-
-@media screen and (min-width: 768px) {
-
-}
-
-@media screen and (min-width: 1024px) {
-
-        h1 {
-                font-size: 6rem;
-                line-height: .5em;
-        }
-
-        nav {
-                margin-top: 1.6em;
-                align-content: right;
-        }
-
-        nav ul {
-                text-align: right;
-        }
-
-        header a {
-                font-size: 1.1rem;
-                padding-right: 0;
-                padding-left: 1.9em;
-        }
-        #systems {
-                text-align: center;
-        }
-
-        #systems > .row section {
-                align-content: flex-start;
-        }
-
-        #layout {
-                display: flex;
-                flex-wrap: wrap;
-        }
-
-        #benefits > div {
-                margin: 0 auto;
-        }
-
-        #benefits section {
-                text-align: left;
-        }
-
-        footer div {
-                text-align: left;
-        }
-
-        footer ul {
-                text-align: left;
-        }
-
-        footer a {
-                padding-left: 0;
-        }
-
-        #testing {
-                padding: 0;
-                margin: 0;
-        }
-
-        #testing h2 {
-                padding: 0;
-                margin: 0;
-        }
-
-        #testing p:last-child {
-                margin-bottom: 0;
-        }
-
-        #testing > div:first-child {
-                background: url("../img/rainbow.jpg") no-repeat -25px;
-                  background-size: auto;
-                -moz-background-size: contain;
-                -webkit-background-size: contain;
-                -o-background-size: contain;
-                -ms-background-size: contain;
-                background-size: cover;
-        }
-
-        header div div {
-                padding: 5em;
-        }
-
-        img {
-                width: 6em;
-                padding-top: 1em;
-                padding-bottom: .5em;
-              }
-        }
 
 /* ----- FRAMEWORK ----- */
 
@@ -390,8 +303,6 @@ header .wrapper div:last-child,
         margin: 0 auto;
 }
 
-
-
 header .wrapper div:last-child p,
 #layout > section:last-child {
         text-align: center;
@@ -405,6 +316,41 @@ a:hover {
 
 /* ----- HERO ----- */
 
+@media screen and (min-width: 768px) {
+
+        header a {
+                font-size: 1rem;
+                padding-right: 0;
+                padding-left: 1.9em;
+        }
+
+        h1 + p {
+                font-size: 40px;
+        }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+        header a {
+                font-size: 1.1rem;
+                padding-right: 0;
+                padding-left: 1.9em;
+        }
+
+
+        header div div {
+                padding: 5em;
+        }
+
+        img {
+                width: 6em;
+                padding-top: 1em;
+                padding-bottom: .5em;
+              }
+}
+
 header div .wrapper {
         background: url("../img/bg-balloons.jpg") no-repeat;
         -moz-background-size: contain;
@@ -417,7 +363,7 @@ header div .wrapper {
 header .wrapper div:last-child p {
         font-size: 1.2rem;
         line-height: 2em;
-        margin: 0 2rrem;
+        margin: 0 2rem;
 }
 
 header div div {
@@ -425,6 +371,30 @@ header div div {
 }
 
 /* ----- NAVIGATION ----- */
+
+@media screen and (min-width: 768px) {
+
+        nav {
+                margin-top: 1.6em;
+                align-content: center;
+        }
+
+        nav ul {
+                text-align: center;
+        }
+}
+
+@media screen and (min-width: 1024px) {
+
+        nav {
+                margin-top: 1.6em;
+                align-content: right;
+        }
+
+        nav ul {
+                text-align: right;
+        }
+}
 
 nav {
         text-align: center;
@@ -434,11 +404,23 @@ header li {
         display: inline-block;
 }
 
-footer li {
-        list-style: none;
-}
 
 /* ----- FOOTER ----- */
+
+
+@media screen and (min-width: 1024px) {
+        footer div {
+                text-align: left;
+        }
+        
+        footer ul {
+                text-align: left;
+        }
+        
+        footer a {
+                padding-left: 0;
+        }
+}
 
 footer {
         border-top: 10px solid #FFD8DB;
@@ -451,6 +433,7 @@ footer .row {
 
 footer li {
         margin: .8em 0;
+        list-style: none;
 }
 
 footer p {
@@ -465,41 +448,146 @@ footer p:last-child {
         font-weight: 400;
 }
 
-/* ----- LAYOUT ----- */
 
+/* ----- ANCHORS ----- */
 
-#layout > section:last-child {
-        padding: 2em;
+@media screen and (min-width: 1024px) {
+
 }
 
-#layout h2:last-child {
-        margin: .5em 0 .7em;
-        font-size: 2.4rem;
+a {
+        text-decoration: none;
+        font: 1.2rem 'Open Sans', sans-serif, 'Arial', sans-serif;
+        font-weight: 400;
+        border-radius: 16px;
+        padding: 0 .6em;
+        background-color: #ffff;
 }
 
-/* ----- TESTING ----- */
-
-#testing {
-        padding-bottom: 2em;
-}
-
-#testing > div:first-child{
-        background: url("../img/rainbow.jpg") no-repeat -20px;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        background-size: cover;
+a:hover {
+        border-radius: 16px;
+        color: #003833;
 }
 
 /* ----- SYSTEMS ----- */
+
+@media screen and (min-width: 768px) {
+
+        #systems {
+                text-align: center;
+                margin: 0 auto;
+        }
+
+        #systems div div {
+                text-align: center;
+                margin: 0 auto;
+        }
+}
+
+@media screen and (min-width: 1024px) {
+        #systems {
+                text-align: center;
+        }
+
+        #systems > .row section {
+                align-content: flex-start;
+        }
+
+        #systems div div {
+                text-align: center;
+                margin: 0 auto;
+        }
+}
 
 
 #systems > div {
         margin: 0 auto;
 }
 
+/* ----- TESTING ----- */
+
+@media screen and (min-width: 1024px) {
+        #testing {
+                padding: 0;
+                margin: 0;
+        }
+
+        #testing h2 {
+                padding: 0;
+                margin: 0;
+        }
+
+        #testing p:last-child {
+                margin-bottom: 0;
+        }
+
+        #testing > div:first-child {
+                background: url("../img/rainbow.jpg") no-repeat -9px -47px;
+                background-size: auto;
+                background-clip: border-box;
+                -moz-background-size: contain;
+                -webkit-background-size: contain;
+                -o-background-size: contain;
+                -ms-background-size: contain;
+                background-size: contain;
+                background-position: center;
+                background-clip: border-box;
+        }
+}
+
+#testing {
+        padding-bottom: 2em;
+}
+
+#testing > div:first-child{
+        background: url("../img/rainbow.jpg") no-repeat -3px 24px;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-clip: content-box;
+}
+
+/* ----- LAYOUT ----- */
+
+@media screen and (min-width: 768px) {
+
+
+        #layout > section:last-child {
+                margin: 0 auto;
+        }
+}
+
+@media screen and (min-width: 1024px) {
+        #layout {
+                display: flex;
+                flex-wrap: wrap;
+        }
+}
+
+#layout > section:last-child {
+        padding: 2em;
+}
+
+#layout section:last-child h2 {
+        margin: .5em 0 .7em;
+        font-size: 2.4rem;
+}
+
 /* ----- BENEFITS ----- */
+
+
+@media screen and (min-width: 1024px){
+        #benefits > div {
+                margin: 0 auto;
+        }
+        
+        #benefits section {
+                text-align: left;
+        }
+}
 
 #benefits > div{
         padding-bottom: 0;
@@ -513,6 +601,13 @@ footer p:last-child {
         text-align: center;
 }
 
+/*--------------------------------------------------------------
+    7.0 - UTILITIES
+-------------------------------------------------------------- */
+
+.col-center {
+        justify-content: center;
+}
 
 /* ----- ICONS ----- */
 
@@ -528,8 +623,4 @@ footer p:last-child {
         font-size: 1.9rem;
         padding: 0;
 }
-
-/*--------------------------------------------------------------
-    7.0 - UTILITIES
--------------------------------------------------------------- */
 
