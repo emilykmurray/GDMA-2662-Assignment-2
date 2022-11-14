@@ -53,13 +53,8 @@ html {
 -------------------------------------------------------------- */
 
 img {
-        width: 150px;
-        padding: 1em 0 .5em;
-}
-
-footer img {
-        width: 100px;
-        padding: 1em 0 .5em;
+        width: 125px;
+        padding-top: 1em;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,7 +89,6 @@ nav,
 header div div,
 footer,
 #systems > div,
-#layout > section:last-child,
 #benefits {
         text-align: center;
 }
@@ -103,11 +97,11 @@ h1 {
         font-size: 4.5rem;
         font-weight: 400;
         margin: 0;
-        padding-top: 4em;
+        /* padding-top: 4em; */
 }
 
 h2 {
-        font-size: 2.2rem;
+        font-size: 3rem;
         font-weight: 400;
         margin-bottom: .3em;
 
@@ -120,7 +114,7 @@ h3 {
 }
 
 p {
-        line-height: 1.9rem;
+        line-height: 2.1rem;
         color:#00515D;
         font-size: 1.1rem;
         margin: 0 0 1em;
@@ -145,6 +139,7 @@ ul {
         margin-top: 0;
 }
 
+
 /*--------------------------------------------------------------
     5.0 - OBJECTS
 -------------------------------------------------------------- */
@@ -163,6 +158,11 @@ ul {
 
 [class*='col-'] {
         padding: 8px;
+}
+
+[class*='col-'] [class*='col-'] {
+        margin-left: -8px;
+        margin-right: -8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -219,9 +219,7 @@ ul {
 
 @media screen and (min-width: 768px) {
 
-    [class*='col-'] {
-        padding: 8px;
-    }
+
 
     .col-md-1 {
         width: calc(100% * 1 / 12);
@@ -264,9 +262,6 @@ ul {
 
 @media screen and (min-width: 1024px) {
 
-    [class*='col-'] {
-        padding: 8px;
-    }
 
     .col-lg-1 {
         width: calc(100% * 1 / 12);
@@ -314,19 +309,17 @@ a {
         text-decoration: none;
         font: 1.2rem 'Open Sans', sans-serif, 'Arial', sans-serif;
         font-weight: 400;
-        padding: 0 .6em;
+        padding: .2em 1em;
+        border-radius: 16px;
+        color: #00B0A3;
         background-color: #ffff;
 }
 
 a:hover {
         border-radius: 16px;
-        color: #003833;
+        color:#00515D;
 }
-
-
-@media screen and (min-width: 1024px) {
-
-}
+  
 
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
@@ -337,27 +330,36 @@ header .wrapper div:last-child,
         margin: 0 auto;
 }
 
-#layout > section:last-child,
+#layout > section:first-child,
 header > div:last-child,
 a:hover {
         background-color:  #FFD8DB;
 }
 
+@media screen and (min-width: 1024px) {
+        #layout > section:first-child {
+                order: 1;
+        }
+}
+
+
 /* ----- HERO ----- */
 
-header div .wrapper {
+header div:last-child .wrapper {
         background: url("../img/bg-balloons.jpg") no-repeat;
         -moz-background-size: contain;
         -webkit-background-size: contain;
         -o-background-size: contain;
         -ms-background-size: contain;
         background-size: contain;
+        margin-top: 10em;
+        padding-top: 10em;
 }
 
 header .wrapper div:last-child p {
         font-size: 1.3rem;
         line-height: 2em;
-        padding-bottom: 3em;
+        /* padding-bottom: 3em; */
 }
 
 header li {
@@ -372,9 +374,13 @@ header li {
 @media screen and (min-width: 768px) {
 
         header a {
-                font-size: 1rem;
-                padding-right: 0;
-                margin-left: 1.9em;
+                font-size: 1.2rem;
+                /* padding-right: 0;
+                margin-left: 1.9em; */
+        }
+
+        header div:last-child .wrapper {
+                margin-top: 6em;
         }
 
 }
@@ -384,21 +390,27 @@ header li {
 
         header a {
                 font-size: 1.1rem;
-                padding: 0 0 0 1.9em;
+                padding-right: 1em;
+                margin-left: .5em;
         }
 
         header .wrapper div:last-child p {
                 padding-bottom: 2em;
         }
+
+        header div:last-child .wrapper {
+                margin-top: 7em;
+        }
 }
 
 /* ----- NAVIGATION ----- */
 
+
 @media screen and (min-width: 768px) {
 
         nav {
-                margin-top: 1.6em;
                 align-content: center;
+                margin-top: 2.2em;
         }
 
         nav ul {
@@ -412,6 +424,11 @@ header li {
         nav ul {
                 text-align: right;
         }
+
+        nav {
+                margin-top: 2.2em;
+        }
+
 }
 
 /* ----- FOOTER ----- */
@@ -421,6 +438,11 @@ footer {
         margin-bottom: 4em;
 }
 
+footer img {
+        width: 100px;
+        padding: 1em 0 .5em;
+}
+
 footer .row {
         justify-content: left;
 }
@@ -428,7 +450,6 @@ footer .row {
 footer ul {
         margin-top: 4em;
 }
-
 
 footer li {
         margin: .8em 0;
@@ -452,8 +473,14 @@ footer p:last-child {
 @media screen and (min-width: 768px) {
 
         footer ul {
-                text-align: left;
+                text-align: center;
         }
+
+        footer ul {
+                margin-top: 0;
+        }
+
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -464,9 +491,13 @@ footer p:last-child {
         footer ul {
                 text-align: left;
         }
+
+        footer .row {
+                flex-direction: row-reverse;
+        }
         
-        footer a {
-                padding-left: 0;
+        footer img {
+                margin-top: 2.5em;
         }
 }
 
@@ -482,16 +513,23 @@ footer p:last-child {
         text-align: left;
 }
 
+#systems div:last-child section > div:first-child {
+        text-align: right;
+}
+
 @media screen and (min-width: 768px) {
 
         #systems > div {
                 text-align: center;
-                margin: 0 auto;
         }
 
 
         #systems section {
                 margin: 0 auto;
+                text-align: center;
+        }
+
+        #systems div:last-child section > div:first-child {
                 text-align: center;
         }
 }
@@ -525,7 +563,7 @@ footer p:last-child {
 }
 
 #testing > div:first-child{
-        background: url("../img/rainbow.jpg") no-repeat -3px 24px;
+        background: url("../img/rainbow.jpg") no-repeat;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -548,7 +586,7 @@ footer p:last-child {
 
         #testing h2 {
                 padding: 0;
-                margin: 0;
+                margin-bottom: .5em;
         }
 
         #testing p:last-child {
@@ -557,17 +595,17 @@ footer p:last-child {
 
         #testing > div:last-child {
                 text-align: left;
+                padding: 2em;
         }
 
         #testing > div:first-child {
-                background: url("../img/rainbow.jpg") no-repeat -9px -47px;
-                background-size: auto;
+                background: url("../img/rainbow.jpg") no-repeat ;
                 background-clip: border-box;
-                -moz-background-size: contain;
-                -webkit-background-size: contain;
-                -o-background-size: contain;
-                -ms-background-size: contain;
-                background-size: contain;
+                -moz-background-size: cover;
+                -webkit-background-size: cover;
+                -o-background-size: cover;
+                -ms-background-size: cover;
+                background-size: cover;
                 background-position: center;
                 background-clip: border-box;
         }
@@ -576,28 +614,31 @@ footer p:last-child {
 /* ----- LAYOUT ----- */
 
 #layout section {
-        margin: .6em 0;
+        margin-top: .6em;
+        margin-bottom: .6em;
 }
 
 
-#layout > section:last-child {
+#layout > section:first-child {
         padding: 2em;
         background-clip: content-box;
+        text-align: center;
 }
 
-#layout section:last-child h2 {
+#layout section:first-child h2 {
         margin: 1.5em 0 .7em;
         font-size: 2.4rem;
 }
 
-#layout > section:last-child > p {
+#layout > section:first-child > p {
         padding: 0 1.5em 1.5em;
 }
+
 
 @media screen and (min-width: 768px) {
 
 
-        #layout > section:last-child {
+        #layout > section:first-child {
                 margin: 0 auto;
         }
 }
@@ -607,6 +648,7 @@ footer p:last-child {
         #layout {
                 margin-bottom: 5em;
         }
+
 }
 
 /* ----- BENEFITS ----- */
@@ -671,7 +713,7 @@ footer p:last-child {
 .fa-bacteria,
 .fa-atom,
 .fa-dna {
-        font-size: 1.9rem;
+        font-size: 3rem;
         padding: 0;
         color: #00515D;
 }

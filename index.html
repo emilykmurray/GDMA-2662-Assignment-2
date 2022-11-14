@@ -14,11 +14,11 @@
 <body>
     <header id="hero">
         <div id="pos-fixed">
-            <div class="wrapper row">
-                <div class="col-sm-12 col-md-3 col-lg-2">
+            <div class="wrapper row pink-bg">
+                <div class="col-sm-12 col-md-3 col-lg-1">
                     <img src="img/logo-ding.jpg" alt="ding" width="140">
                 </div>
-                <nav class="col-sm-12 col-md-9 col-lg-10">
+                <nav class="col-sm-12 col-md-9 col-lg-11">
                     <ul>
                         <li><a href="#systems">Systems</a></li>
                         <li><a href="#layout">Layout</a></li>
@@ -41,7 +41,7 @@
 
     <main class="wrapper">
         <section id="systems">
-            <div class="col-sm-12 col-md-9 col-lg-8">
+            <div class="col-sm-12 col-md-10 col-lg-8">
                 <header>
                     <h2>design systems</h2>
                 </header>
@@ -88,6 +88,13 @@
         </section>
 
         <div id="layout" class="row">
+            <section class="col-sm-12 col-md-10 col-lg-4">
+                <header>
+                    <h2>why atomic design</h2>
+                </header>
+                <p>Atomic design provides a clear methodology for crafting design systems. Atomic design gives us the ability to traverse from abstract to concrete. Because of this, we can create systems that promote consistency and scalability while simultaneously showing things in their final context. And by assembling rather than deconstructing, we're crafting a system right out of the gate instead of cherry picking patterns after the fact.</p>
+            </section>
+            
             <section class="col-lg-8">
                 <header>
                     <h2>layout</h2>
@@ -99,7 +106,7 @@
                         <header>
                             <h3>templates</h3>
                         </header>
-                        <p>Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound.<b>Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound</b>. Templates are also where clients start seeing the final design in place. In my experience working with this methodology, templates begin their life as HTML wireframes, but over time increase fidelity to ultimately become the final deliverable. </p>
+                        <p>Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound.<b> Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound</b>. Templates are also where clients start seeing the final design in place. In my experience working with this methodology, templates begin their life as HTML wireframes, but over time increase fidelity to ultimately become the final deliverable. </p>
                     </section>
 
                     <section class="col-sm-12 col-md-6 col-lg-6">
@@ -109,13 +116,6 @@
                         <p><b>Pages are specific instances of templates</b>. Here, placeholder content is replaced with real representative content to give an accurate depiction of what a user will ultimately see. Pages are the highest level of fidelity and because they're the most tangible, it's typically where most people in the process spend most of their time and what most reviews revolve around.</p>
                     </section>
                 </div>
-            </section>
-
-            <section class="col-sm-12 col-md-12 col-lg-4">
-                <header>
-                    <h2>why atomic design</h2>
-                </header>
-                <p>Atomic design provides a clear methodology for crafting design systems. Atomic design gives us the ability to traverse from abstract to concrete. Because of this, we can create systems that promote consistency and scalability while simultaneously showing things in their final context. And by assembling rather than deconstructing, we're crafting a system right out of the gate instead of cherry picking patterns after the fact.</p>
             </section>
         </div>
 
@@ -181,15 +181,19 @@
                 </ul>
             </nav>
 
-            <div class="col-sm-12 col-lg-3">
+            <div class="col-sm-12 col-lg-2">
                 <img src="img/logo-ding.jpg" alt="ding" width="106">
                 <p>Atomic Design</p>
                 <p>By Brad Frost</p>
             </div>
         </div>
     </footer>
-</body>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/functions.js"></script>
+
+</body>
+</html>
 
 
 
