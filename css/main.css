@@ -85,18 +85,18 @@ p  {
 h1,
 h2,
 footer p:last-child,
-footer p:last-child a {
+footer p a {
         font-weight: 400;
 
 }
 
 h1 {
-        font-size: 4.5rem;
+        font-size: 3.2rem;
         margin: 0;
 }
 
 h2 {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
         margin-bottom: .3em;
 
 }
@@ -104,11 +104,11 @@ h2 {
 h3 {
         margin: 1em 0 .2em;
         font-weight: 500;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
 }
 
 p {
-        line-height: 1.8rem;
+        line-height: 1.8em;
         font-size: 1rem;
         margin-bottom: 0;
 }
@@ -116,8 +116,14 @@ p {
 @media screen and (min-width: 768px) {
 
         p {
-                font-size: 1.2rem;
-                line-height: 2.3rem;
+                font-size: 1.1rem;
+                line-height: 2em;
+        }
+
+        h2 {
+                font-size: 2.8rem;
+                margin-bottom: .3em;
+        
         }
         
 }
@@ -125,8 +131,12 @@ p {
 @media screen and (min-width: 1024px) {
 
         h1 {
-                font-size: 6.2rem;
+                font-size: 6.6rem;
                 line-height: .7em;
+        }
+
+        p {
+                line-height: 2.1rem;
         }
 }
 
@@ -134,13 +144,12 @@ p {
 
 ul {
         padding-left: 0;
-        line-height: 2rem;
         margin-top: 0;
 }
 
 @media screen and (min-width: 1024px) {
         ul {
-                margin-top: .5em;
+                margin-top: 1em;
         }
 
 }
@@ -158,13 +167,13 @@ a {
 /* ----- IMAGES ----- */
 
 img {
-        width: 100px;
+        width: 90px;
         margin-top: .5em;
 }
 
 @media screen and (min-width: 1024px) {
         img {
-                width: 125px;
+                width: 115px;
         }
 }
 
@@ -185,12 +194,12 @@ img {
 }
 
 [class*='col-'] {
-        padding: 4px;
+        padding: 0;
 }
 
 [class*='col-'] [class*='col-'] {
-        margin-left: -4px;
-        margin-right: -4px;
+        margin-left: -0;
+        margin-right: -0;
 }
 
 .col-sm-1 {
@@ -360,16 +369,14 @@ a:hover {
         text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
-        #layout > section:first-child {
-                order: 1;
-        }
-}
-
 /* ----- HERO ----- */
 
+#hero a {
+        font-size: .9rem;
+}
+
 #hero p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         line-height: 1.8em;
         padding-bottom: 1.7em;
 }
@@ -379,14 +386,14 @@ a:hover {
 }
 
 #hero div:last-child .wrapper {
-        background: url("../img/bg-balloons.jpg") no-repeat;
+        background: url("../img/bg-balloons.jpg") center bottom no-repeat;
         -moz-background-size: contain;
         -webkit-background-size: contain;
         -o-background-size: contain;
         -ms-background-size: contain;
         background-size: contain;
-        padding-top: 11em;
-        margin-top: 9.5em;
+        padding-top: 10em;
+        margin-top: 7em;
 }
 
 #hero > div:first-child {
@@ -410,12 +417,26 @@ a:hover {
         }
 
         #hero div:last-child .wrapper {
+                background: url("../img/bg-balloons.jpg")no-repeat;
+                -moz-background-size: contain;
+                -webkit-background-size: contain;
+                -o-background-size: contain;
+                -ms-background-size: contain;
+                background-size: contain;
                 margin-top: 5em;
+        }
+
+        #hero > div:first-child {
+                text-align: left;
         }
 }
 
 
 @media screen and (min-width: 1024px) {
+
+        #hero nav {
+                margin-top: 1.2em;
+        }
 
         #hero li {
                 margin-left: .5em;
@@ -456,6 +477,10 @@ a:hover {
         nav {
                 margin: .8em 0em 1em;
         }
+
+        #hero nav {
+                margin-top: .2em;
+        }
 }
 
 /* ----- FOOTER ----- */
@@ -469,7 +494,7 @@ footer p {
 
 footer {
         border-top: 6px solid #FFD8DB;
-        margin-bottom: 4em;
+        margin-bottom: 3em;
 }
 
 footer img {
@@ -482,24 +507,24 @@ footer .row {
 }
 
 footer ul {
-        margin-top: 2.8em;
+        margin-top: 1.8em;
         line-height: 2.5em;
 }
 
 footer li {
-        margin: .8em 0;
+        margin: .5em 0;
         list-style: none;
 }
 
 footer p {
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 1em;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.2em;
 }
 
 footer p:last-child a {
         font-family: 'Roboto Slab', 'Georgia', serif;
-        font-size: 1rem;
+        font-size: .9rem;
 }
 
 footer p:last-child a:hover {
@@ -509,11 +534,29 @@ footer p:last-child a:hover {
 
 @media screen and (min-width: 768px) {
 
-        footer ul {
-                text-align: center;
-                margin-top: 2em;
+        footer {
+                margin: 0;
+                border-top: 12px solid #FFD8DB;
         }
 
+        footer p {
+                font-size: 1.3rem;
+                line-height: 1.4em;
+        }
+
+        footer ul {
+                text-align: left;
+                margin-top: 1em;
+        }
+
+        footer p:last-child a {
+                font-size: 1rem;
+        }
+
+        footer .col-lg-2 {
+                text-align: right;
+                margin-top: 4em;
+        }
 }
 
 @media screen and (min-width: 1024px) {
@@ -528,7 +571,12 @@ footer p:last-child a:hover {
         }
         
         footer img {
-                margin-top: 1.8em;
+                margin-top: 1em;
+        }
+
+        footer .col-lg-2 {
+                text-align: left;
+                margin-top: 0;
         }
 }
 
@@ -543,8 +591,12 @@ footer p:last-child a:hover {
         margin-bottom: 2.5em;
 }
 
+#systems section:last-child p:last-child {
+        margin-bottom: 0;
+}
+
 #systems h3 {
-        margin: 0 0 .9em;
+        margin: 0 0 .5em;
         font-weight: 500;
         font-size: 1.4rem;
 }
@@ -552,34 +604,39 @@ footer p:last-child a:hover {
 #systems > div {
         margin: 0 auto;
         text-align: left;
-        padding-bottom: 3em;
 }
 
 
 @media screen and (min-width: 768px) {
 
-        #systems > div,
-        #systems section,
-        #systems div:last-child section > div:first-child {
-                text-align: center;
+        #systems > div:first-child {
+                margin-bottom: 2em;
+        }
+
+        #systems {
+                margin-bottom: 4em;
         }
 
         #systems section {
                 margin: 0 auto;
-                margin-bottom: 3em;
                 align-content: flex-start;
         }
 
-        #systems {
-                margin-top: 4em;
+        #systems div > section {
+                margin-bottom: 2em;
         }
 
-        #systems > div {
-                margin-bottom: 3em;
+        #systems h3 {
+                margin: 0;
+        }
+
+        #systems {
+                margin-top: 3em;
+                margin-bottom: 1em;
         }
 
         #systems p {
-                margin-bottom: 0em;
+                margin: 0;
         }
 }
 
@@ -588,6 +645,11 @@ footer p:last-child a:hover {
         #systems > div:first-child {
                 margin-bottom: 3em;
                 margin-top: 3em;
+                text-align: center;
+        }
+
+        #systems section {
+                text-align: center;
         }
 }
 
@@ -605,6 +667,10 @@ footer p:last-child a:hover {
         -o-background-size: cover;
         -ms-background-size: cover;
         background-size: cover;
+        -moz-background-clip: content-box;
+        -webkit-background-clip: content-box;
+        -o-background-clip: content-box;
+        -ms-background-clip: content-box;
         background-clip: content-box;
 }
 
@@ -615,13 +681,17 @@ footer p:last-child a:hover {
                 margin: 0 auto;
                 text-align: center;
         }
+
+        #testing {
+                margin-top: 2.5em;
+        }
 }
 
 @media screen and (min-width: 1024px) {
 
         #testing h2 {
                 padding: 0;
-                margin-bottom: .5em;
+                margin-top: .5em;
         }
 
         #testing p:last-child {
@@ -640,13 +710,25 @@ footer p:last-child a:hover {
         margin-top: 6em;
 }
 
+#layout p {
+        margin-top: 0;
+}
+
+#layout h2 {
+        margin-top: 0;
+}
+
 #layout > section:first-child {
+        -moz-background-clip: content-box;
+        -webkit-background-clip: content-box;
+        -o-background-clip: content-box;
+        -ms-background-clip: content-box;
         background-clip: content-box;
         margin-bottom: 5em;
 }
 
 #layout section:first-child h2 {
-        margin: 2em 0 .7em;
+        margin: 1.2em 0 .7em;
         font-size: 2.4rem;
 }
 
@@ -654,26 +736,39 @@ footer p:last-child a:hover {
         padding: 0 1.8em 3em;
 }
 
+#layout h3 {
+        margin: 1.7em 0 .2em;
+}
+
 @media screen and (min-width: 768px) {
+
+        #layout {
+                margin-top: .5em;
+        }
 
         #layout > section:first-child {
                 margin: 0 auto;
-                margin-bottom: 2em;
+                margin-bottom: 4em;
         }
 
         #layout > section:first-child > p {
                 padding: 0 2em 3.5em;
         }
 }
-
 @media screen and (min-width: 1024px) {
 
         #layout {
-                margin-bottom: 5em;
+                margin-bottom: 3em;
         }
 
         #layout > section:first-child {
+                order: 1;
                 padding: 1em;
+                margin-bottom: 2em;
+                -moz-background-clip: content-box;
+                -webkit-background-clip: content-box;
+                -o-background-clip: content-box;
+                -ms-background-clip: content-box;
                 background-clip: content-box;
         }
 
@@ -686,7 +781,7 @@ footer p:last-child a:hover {
 
 
 #benefits {
-        margin-bottom: 5em;
+        margin-bottom: 1.5em;
 }
 
 #benefits > h3 {
@@ -696,8 +791,13 @@ footer p:last-child a:hover {
 }
 
 #benefits p {
-        margin-top: 0;
-        margin-bottom: 2.2em;
+        margin-top: .5em;
+        margin-bottom: 1.8em;
+}
+
+#benefits .col-lg-8 p {
+        margin-top: .5em;
+        margin-bottom: .9em;
 }
 
 @media screen and (min-width: 768px) {
@@ -706,15 +806,21 @@ footer p:last-child a:hover {
         #benefits section {
                 margin: 0 auto;
         }
+
+        #benefits {
+                margin: 0;
+        }
+
+        #benefits h2{
+                margin-top: 0;
+        }
+
+        #benefits h3 {
+                margin: 0;
+        }
 }
 
 @media screen and (min-width: 1024px){
-
-
-        #benefits > div > section:first-child,
-        #benefits > div > section:last-child {
-                padding-top: 5em;
-        }
 
         #benefits h3,
         #benefits header ~ p {
@@ -728,7 +834,12 @@ footer p:last-child a:hover {
         #benefits h3 {
                 text-transform: capitalize;
         }
+
+        #benefits h2{
+                margin-top: .2em;
+        }
 }
+
 
 
 /*--------------------------------------------------------------
@@ -743,20 +854,28 @@ footer p:last-child a:hover {
 }
 
 [class^="fa"] {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 900;
 } 
 
 .fa-bacteria,
 .fa-atom,
 .fa-dna {
-        font-size: 1.5rem;
-        padding: 0;
+        font-size: 1.7rem;
 }
 
 .fa-pen-ruler,
 .fa-code {
-        margin-top: 0.3em;
+        margin-top: 0.7em;
+}
+
+@media screen and (min-width: 768px) {
+
+        .fa-bacteria,
+        .fa-atom,
+        .fa-dna {
+                font-size: 2rem;
+        }
 }
 
 @media screen and (min-width: 1024px) {
@@ -764,6 +883,11 @@ footer p:last-child a:hover {
         .fa-bacteria,
         .fa-atom,
         .fa-dna {
-                font-size: 3.3rem;
+                font-size: 3rem;
         }
+
+        .fa-pen-ruler,
+        .fa-code {
+        margin: 0 0 0 .3em;
+        }       
 }
