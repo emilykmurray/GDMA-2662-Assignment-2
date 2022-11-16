@@ -71,7 +71,6 @@ a {
 }
 
 h1,
-nav,
 footer {
         text-align: center;
 }
@@ -164,6 +163,10 @@ a {
         background-color: #fff;
 }
 
+a:hover {
+        background-color:  #FFD8DB;
+}
+
 /* ----- IMAGES ----- */
 
 img {
@@ -194,12 +197,12 @@ img {
 }
 
 [class*='col-'] {
-        padding: 0;
+        padding: 2px;
 }
 
 [class*='col-'] [class*='col-'] {
-        margin-left: -0;
-        margin-right: -0;
+        margin-left: -2px;
+        margin-right: -2px;
 }
 
 .col-sm-1 {
@@ -357,8 +360,7 @@ header .wrapper div:last-child {
 }
 
 #layout > section:first-child,
-header > div:last-child,
-a:hover {
+header > div:last-child {
         background-color:  #FFD8DB;
 }
 
@@ -376,7 +378,7 @@ a:hover {
 }
 
 #hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.8em;
         padding-bottom: 1.7em;
 }
@@ -401,9 +403,6 @@ a:hover {
         background-color: #fff;
         border-bottom: 5px solid #FFD8DB;
         text-align: center;
-}
-
-#hero > div:first-child {
         position: fixed;
         top: 0;
         left: 0;
@@ -465,6 +464,11 @@ a:hover {
 /* ----- NAVIGATION ----- */
 
 
+nav {
+        text-align: center;
+}
+
+
 @media screen and (min-width: 768px) {
 
         nav ul {
@@ -477,6 +481,14 @@ a:hover {
         nav {
                 margin: .8em 0em 1em;
         }
+
+        #hero nav {
+                margin-top: 1.2em;
+        }
+}
+
+@media screen and (min-width: 1024px) {
+
 
         #hero nav {
                 margin-top: .2em;
@@ -522,9 +534,8 @@ footer p {
         line-height: 1.2em;
 }
 
-footer p:last-child a {
-        font-family: 'Roboto Slab', 'Georgia', serif;
-        font-size: .9rem;
+footer p a {
+        font: .9rem 'Roboto Slab', 'Georgia', serif;
 }
 
 footer p:last-child a:hover {
@@ -549,7 +560,7 @@ footer p:last-child a:hover {
                 margin-top: 1em;
         }
 
-        footer p:last-child a {
+        footer p a {
                 font-size: 1rem;
         }
 
@@ -562,7 +573,8 @@ footer p:last-child a:hover {
 @media screen and (min-width: 1024px) {
 
         footer,
-        footer ul {
+        footer ul,
+        footer .col-lg-2 {
                 text-align: left;
         }
 
@@ -575,7 +587,6 @@ footer p:last-child a:hover {
         }
 
         footer .col-lg-2 {
-                text-align: left;
                 margin-top: 0;
         }
 }
@@ -850,18 +861,13 @@ footer p:last-child a:hover {
 
 [class^="fa"] {
         color: #00515D;
-
-}
-
-[class^="fa"] {
-        font-size: 2.5rem;
+        font-size: 1.7rem;
         font-weight: 900;
 } 
 
-.fa-bacteria,
-.fa-atom,
-.fa-dna {
-        font-size: 1.7rem;
+.fa-pen-ruler,
+.fa-code {
+        font-size: 2.5rem;
 }
 
 .fa-pen-ruler,
